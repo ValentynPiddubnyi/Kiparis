@@ -30,7 +30,7 @@ public class PatientController {
         contacts.add(new Contact(2,"Поддубный2","Валентин2","Владимирович2",19850705,Diagnosis.PERELOM,2, "Зубр") );
         contacts.add(new Contact(3,"Поддубный3","Валентин3","Владимирович3",19850705,Diagnosis.PRATRYZIYA,3, "Говнокодер") );
         contacts.add(new Contact(4,"Поддубный4","Валентин4","Владимирович4",19850705,Diagnosis.GRIGA,4, "Программист") );
-        contacts.add(new Contact(5,"Поддубный5","Валентин5","Владимирович5",19850705,Diagnosis.PRATRYZIYA,5, "Реабилитолог") );
+        contacts.add(new Contact(5,"Поддубный5","Валентин5","Владимирович5",19850706,Diagnosis.PRATRYZIYA,5, "Реабилитолог") );
         session.setAttribute("contacts", contacts);
     }
 
