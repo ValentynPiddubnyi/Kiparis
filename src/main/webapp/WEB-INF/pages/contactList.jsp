@@ -77,11 +77,9 @@
     	            </div>
     
     	            <a>Дата рождения:</a>
-    	            <script>
-    	                $('#sandbox-container .input-group.date').datepicker({});
-    	            </script>
+
     	            <div class="input-group date form-group">
-    	                <input type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+    	                <input name="date" type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
     	            </div>
     
     	            <div class="form-group">
@@ -135,10 +133,10 @@
     	                            <td>${contact.pacientNumber}</td>
                                     <td>${contact.photo}</td>
     	                            <td>${contact.firstName}</td>
-    	                            <td>${contact.secendName}</td>
+    	                            <td>${contact.secondName}</td>
     	                            <td>${contact.thirdName}</td>
                                     <td>${contact.diagnosis}</td>
-    	                            <td>${contact.birthday}</td>
+                                    <td>${contact.birthday}</td>
     	                            <td>${contact.exercisesPassed}</td>
                                     <td>${contact.profession}</td>
     	                        </tr>

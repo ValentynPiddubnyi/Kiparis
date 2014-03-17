@@ -1,0 +1,37 @@
+package com.piddubnyi.kiparis.dao;
+
+import com.piddubnyi.kiparis.model.Contact;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+/**
+ * Created by fil on 3/13/14.
+ */
+@Repository
+public class ContactDAOImpl implements ContactDAO {
+
+    @Autowired
+    private SessionFactory sessionFactory;
+
+    @Override
+    public void addContact(Contact contact) {
+        sessionFactory.getCurrentSession().save(contact);
+    }
+
+    @Override
+    public List<Contact> listContact() {
+        return sessionFactory.getCurrentSession().createQuery("from CONTACTS").list();
+    }
+
+    @Override
+    public void removeContact(Integer id) {
+        Contact contact = (Contact) sessionFactory.getCurrentSession().load(Contact.class, id);
+        if (null != contact) {
+            sessionFactory.getCurrentSession().delete(contact);
+        }
+
+    }
+}

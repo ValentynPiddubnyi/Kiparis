@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2802110353">
+    <data-source source="LOCAL" name="MySQL - Kiparis@localhost" uuid="5b72a122-89d7-4870-9aca-5ba30fb2bd7d">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/Kiparis</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfdadff8dfe5dfc8dfe5dfe5dfe1dff4df8fdff4df83dfc8</user-password>
+      <schema-pattern>Kiparis.*</schema-pattern>
+      <default-schemas>Kiparis.*</default-schemas>
+      <driver-properties>
+        <property name="zeroDateTimeBehavior" value="convertToNull" />
+        <property name="tinyInt1isBit" value="false" />
+      </driver-properties>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+
