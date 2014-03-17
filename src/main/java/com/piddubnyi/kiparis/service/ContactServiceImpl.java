@@ -4,6 +4,7 @@ import com.piddubnyi.kiparis.dao.ContactDAO;
 import com.piddubnyi.kiparis.model.Contact;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -17,6 +18,7 @@ public class ContactServiceImpl implements ContactService {
     private ContactDAO contactDAO;
 
     @Override
+    @Transactional
     public void addContact(Contact contact) {
         contactDAO.addContact(contact);
     }

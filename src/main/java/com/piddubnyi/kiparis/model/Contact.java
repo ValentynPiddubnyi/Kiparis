@@ -2,6 +2,7 @@ package com.piddubnyi.kiparis.model;
 
 import com.piddubnyi.kiparis.model.Diagnosis;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -19,6 +20,7 @@ public class Contact {
     @GeneratedValue
     private Integer pacientNumber = null;
 
+    @Transient
     private String photo = "link to photo";
 
     @Column(name = "FIRSTNAME")
@@ -30,11 +32,16 @@ public class Contact {
     @Column(name = "THIRDNAME")
     private String thirdName = null;
 
+    @Transient
     @DateTimeFormat(pattern = "dd/MM/yyyy")
     private Date birthday = null;
+    @Transient
     private Diagnosis diagnosis = null;
+    @Transient
     Random rn = new Random();
+    @Transient
     private Integer exercisesPassed = rn.nextInt();
+    @Transient
     private String profession = null;
 
     public Contact() {

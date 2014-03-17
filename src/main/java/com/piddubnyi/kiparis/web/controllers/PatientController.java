@@ -29,34 +29,21 @@ public class PatientController {
     ContactService contactService;
 
     @RequestMapping(method = RequestMethod.GET)
-    public String printContacts(ModelMap model, HttpSession session){
+    public String printContacts(ModelMap model) {
 
-    /*List<Contact> contacts = (List<Contact>) session.getAttribute("contacts");
-    if (contacts==null){
-        contacts = new ArrayList();
-        contacts.add(new Contact(1,"Поддубный","Валентин","Владимирович",new Date(19850705), Diagnosis.GRIGA,1, "Инженер") );
-        contacts.add(new Contact(2,"Поддубный2","Валентин2","Владимирович2",new Date(19850705),Diagnosis.PERELOM,2, "Зубр") );
-        contacts.add(new Contact(3,"Поддубный3","Валентин3","Владимирович3",new Date(19850705),Diagnosis.PRATRYZIYA,3, "Говнокодер") );
-        contacts.add(new Contact(4,"Поддубный4","Валентин4","Владимирович4",new Date(19850705),Diagnosis.GRIGA,4, "Программист") );
-        contacts.add(new Contact(5,"Поддубный5","Валентин5","Владимирович5",new Date(19850706),Diagnosis.PRATRYZIYA,5, "Реабилитолог") );
-        session.setAttribute("contacts", contacts);
-    }*/
-    List<Contact> contacts = contactService.listContact();
+        List<Contact> contacts = contactService.listContact();
 
-    model.addAttribute("contacts", contacts);
-    return "contactList";
-}
+        model.addAttribute("contacts", contacts);
+        return "contactList";
+    }
 
     @RequestMapping(value = "/patients/new", method = RequestMethod.POST)
     public String newPatient(@RequestParam(value = "firstName") String firstNameFake, @RequestParam String lastName,
                              @RequestParam String midleName, @RequestParam Diagnosis diagnosis, @RequestParam String profession,
-                             @RequestParam @PathVariable @DateTimeFormat(iso= DateTimeFormat.ISO.DATE) Date date, HttpSession session){
-        List<Contact> contacts = (List<Contact>) session.getAttribute("contacts");
-        if (contacts==null){
-            contacts = new ArrayList();
-            session.setAttribute("contacts", contacts);
-        }
-        contacts.add(new Contact(1,lastName,firstNameFake,midleName,date,diagnosis,1, profession) );
+                             @RequestParam @PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date date) {
+
+        Contact contact = new Contact(1, lastName, firstNameFake, midleName, date, diagnosis, 1, profession);
+        contactService.addContact(contact);
         return "redirect:/";
     }
 

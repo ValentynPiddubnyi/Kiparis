@@ -5,6 +5,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 /**
@@ -17,16 +18,19 @@ public class ContactDAOImpl implements ContactDAO {
     private SessionFactory sessionFactory;
 
     @Override
+    @Transactional
     public void addContact(Contact contact) {
         sessionFactory.getCurrentSession().save(contact);
     }
 
     @Override
+    @Transactional
     public List<Contact> listContact() {
-        return sessionFactory.getCurrentSession().createQuery("from CONTACTS").list();
+        return sessionFactory.getCurrentSession().createQuery("from Contact").list();
     }
 
     @Override
+    @Transactional
     public void removeContact(Integer id) {
         Contact contact = (Contact) sessionFactory.getCurrentSession().load(Contact.class, id);
         if (null != contact) {
