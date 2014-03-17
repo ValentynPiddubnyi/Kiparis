@@ -23,16 +23,17 @@ public class Contact {
     @Transient
     private String photo = "link to photo";
 
-    @Column(name = "FIRSTNAME")
+    @Column(name = "firstName")
     private String firstName = null;
 
-    @Column(name = "SECONDNAME")
+    @Column(name = "secondName")
     private String secondName = null;
 
-    @Column(name = "THIRDNAME")
+    @Column(name = "thirdName")
     private String thirdName = null;
 
-    @Transient
+    @Column(name = "birthday")
+    @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "dd/MM/yyyy")
     private Date birthday = null;
     @Transient
@@ -41,8 +42,9 @@ public class Contact {
     Random rn = new Random();
     @Transient
     private Integer exercisesPassed = rn.nextInt();
-    @Transient
     private String profession = null;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date created;
 
     public Contact() {
     }
@@ -133,5 +135,8 @@ public class Contact {
         this.profession = profession;
     }
 
+    public Date getCreated() {
+        return created;
+    }
 }
 

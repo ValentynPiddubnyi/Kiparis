@@ -47,9 +47,15 @@ public class PatientController {
         return "redirect:/";
     }
 
+    @RequestMapping(value = "/patients/remove", method = RequestMethod.POST)
+    public  String removePatient(@RequestParam Integer removeID){
+        contactService.removeContact(removeID);
+        return "redirect:/";
+    }
+
     @InitBinder
     protected void initBinder(WebDataBinder binder) {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         binder.registerCustomEditor(Date.class, new CustomDateEditor(
                 dateFormat, false));
     }
