@@ -21,6 +21,23 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <!-- Confiring deleting alert function -->
+    <script language="javascript">
+        function deletePatient(removeID){
+            var doIt=confirm('Do you want to delete the patient?');
+            if(doIt){
+                var f=document.form;
+                f.method="post";
+                f.action='../patients/remove?removeID='+removeID;
+                f.submit();
+            }
+            else{
+
+            }
+        }
+    </script>
+
 </head>
 <body>
 
@@ -36,6 +53,14 @@
             <a class="navbar-brand" href="#">Кипарис</a>
         </div>
         <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="/">График занятий</a>
+                </li>
+                <li class="active">
+                    <a href="/patients">Список пациентов</a>
+                </li>
+            </ul>
             <form class="navbar-form navbar-right" role="form">
                 <div class="form-group">
                     <input type="text" placeholder="Email" class="form-control">
@@ -136,8 +161,8 @@
                         <tr>
                             <td>
                                 <form action="/patients/remove" method="post">
-                                    <input name="removeID"  type="hidden" value="${contact.pacientNumber}">
-                                    <button type="submit" class="btn btn-danger btn-sm" role="button">X</button>
+                                    <%--<input name="removeID"  type="hidden" value="${contact.pacientNumber}">--%>
+                                    <button type="button" class="btn btn-danger btn-sm" role="button" onclick="deletePatient(${contact.pacientNumber})">X</button>
                                 </form>
                             </td>
                             <td>${contact.pacientNumber}</td>

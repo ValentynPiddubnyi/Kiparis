@@ -22,7 +22,7 @@ import java.util.List;
  */
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/patients")
 public class PatientController {
 
     @Autowired
@@ -37,20 +37,20 @@ public class PatientController {
         return "contactList";
     }
 
-    @RequestMapping(value = "/patients/new", method = RequestMethod.POST)
+    @RequestMapping(value = "/new", method = RequestMethod.POST)
     public String newPatient(@RequestParam(value = "firstName") String firstNameFake, @RequestParam String lastName,
                              @RequestParam String midleName, @RequestParam Diagnosis diagnosis, @RequestParam String profession,
                              @RequestParam @PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date date) {
 
         Contact contact = new Contact(1, lastName, firstNameFake, midleName, date, diagnosis, 1, profession);
         contactService.addContact(contact);
-        return "redirect:/";
+        return "redirect:/patients";
     }
 
-    @RequestMapping(value = "/patients/remove", method = RequestMethod.POST)
+    @RequestMapping(value = "/remove", method = RequestMethod.POST)
     public  String removePatient(@RequestParam Integer removeID){
         contactService.removeContact(removeID);
-        return "redirect:/";
+        return "redirect:/patients";
     }
 
     @InitBinder
@@ -59,5 +59,4 @@ public class PatientController {
         binder.registerCustomEditor(Date.class, new CustomDateEditor(
                 dateFormat, false));
     }
-
 }
