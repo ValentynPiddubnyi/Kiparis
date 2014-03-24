@@ -77,14 +77,8 @@
     <div class="row">
         <div class="col-md-3">
             <h2>Добавить занятие</h2>
-
-            <p>Секция для добавления занятия в график занятий </p>
-
             <div class="form-group">
                 <input type="text" placeholder="Имя пациента">
-                <br/>
-
-                <p>Поле дожно быть с автоподстановкой пациента из базы</p>
             </div>
 
             <a>Дата:</a>
@@ -102,14 +96,16 @@
                     Выбрать тренажор: <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a href="">№1</a></li>
-                    <li><a href="">№2</a></li>
-                    <li><a href="">№3</a></li>
-                    <li><a href="">№4</a></li>
-                    <li><a href="">№5</a></li>
-                    <li><a href="">№6</a></li>
-                    <li><a href="">№7</a></li>
-                    <li><a href="">№8</a></li>
+                    <li><a href="">Тренажор №1</a></li>
+                    <li><a href="">Тренажор №2</a></li>
+                    <li><a href="">Тренажор №3</a></li>
+                    <li><a href="">Тренажор №4</a></li>
+                    <li><a href="">Тренажор №5</a></li>
+                    <li><a href="">Тренажор №6</a></li>
+                    <li><a href="">Тренажор №7</a></li>
+                    <li><a href="">Тренажор №8</a></li>
+                    <li><a href="">Массаж</a></li>
+                    <li><a href="">Консультация</a></li>
                 </ul>
             </div>
 
