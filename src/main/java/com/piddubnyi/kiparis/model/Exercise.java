@@ -1,5 +1,7 @@
 package com.piddubnyi.kiparis.model;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.lang.model.element.Name;
 import javax.persistence.*;
 import java.util.Date;
@@ -23,17 +25,26 @@ public class Exercise {
     private Date start = null;
     private Date end = null;
     private String content = null;
+    @Column(name = "trainer")
     private String group = null;
     private String className = null;
 
     public Exercise(){}
 
-    public Exercise(Date start, Date end, String content, String group, String className) {
+    public Exercise(Date start, Date end, String content, String trainer, String className) {
         this.start = start;
         this.end = end;
         this.content = content;
-        this.group = group;
+        this.group = trainer;
         this.className = className;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public Date getStart() {
@@ -64,8 +75,8 @@ public class Exercise {
         return group;
     }
 
-    public void setGroup(String group) {
-        this.group = group;
+    public void setGroup(String trainer) {
+        this.group = trainer;
     }
 
     public String getClassName() {

@@ -19,8 +19,8 @@
     <![endif]-->
 
     <!-- for mobile devices like android and iphone -->
-    <meta content="True" name="HandheldFriendly" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta content="True" name="HandheldFriendly"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <script type="text/javascript" src="http://www.google.com/jsapi"></script>
     <script type="text/javascript" src="TimeLine/js/jquery-2.0.2.min.js"></script>
     <script type="text/javascript" src="TimeLine/js/timeline-min.js"></script>
@@ -76,72 +76,96 @@
     <!-- Example row of columns -->
     <div class="row">
         <div class="col-md-3">
-            <h2>Добавить занятие</h2>
-            <div class="form-group">
-                <input type="text" placeholder="Имя пациента">
-            </div>
+            <form action="/exerciseNew" method="post">
+                <h2>Добавить занятие</h2>
 
-            <a>Дата:</a>
-            <script>
-                $('#sandbox-container .input-group.date').datepicker({});
-            </script>
-            <div class="input-group date">
-                <input type="text" class="form-control"><span class="input-group-addon"><i
-                    class="glyphicon glyphicon-th"></i></span>
-            </div>
+                <div class="form-group">
+                    <input name="pacientName" type="text" placeholder="Имя пациента" class="form-control">
+                </div>
 
-            <div class="btn-group">
-                <p>Тренажор: </p>
-                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-                    Выбрать тренажор: <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a href="">Тренажор №1</a></li>
-                    <li><a href="">Тренажор №2</a></li>
-                    <li><a href="">Тренажор №3</a></li>
-                    <li><a href="">Тренажор №4</a></li>
-                    <li><a href="">Тренажор №5</a></li>
-                    <li><a href="">Тренажор №6</a></li>
-                    <li><a href="">Тренажор №7</a></li>
-                    <li><a href="">Тренажор №8</a></li>
-                    <li><a href="">Массаж</a></li>
-                    <li><a href="">Консультация</a></li>
-                </ul>
-            </div>
+                <div class="form-group">
+                    <select name="trainer" class="form-control">
+                        <option value="Trainer 1">Тренажер №1</option>
+                        <option value="Trainer 2">Тренажер №2</option>
+                        <option value="Trainer 3">Тренажер №3</option>
+                        <option value="Trainer 4">Тренажер №4</option>
+                        <option value="Trainer 5">Тренажер №5</option>
+                        <option value="Trainer 6">Тренажер №6</option>
+                        <option value="Trainer 7">Тренажер №7</option>
+                        <option value="Trainer 8">Тренажер №8</option>
+                        <option value="Massage">Массаж</option>
+                        <option value="Consultation">Консультация</option>
+                    </select>
+                </div>
 
-            <div class="btn-group">
-                <p>Смена: </p>
-                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-                    Выбрать смену: <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a href="">№1</a></li>
-                    <li><a href="">№2</a></li>
-                    <li><a href="">№3</a></li>
-                    <li><a href="">№4</a></li>
-                    <li><a href="">№5</a></li>
-                    <li><a href="">№6</a></li>
-                    <li><a href="">№7</a></li>
-                    <li><a href="">№8</a></li>
-                </ul>
-            </div>
+                <div class="form-group">
+                    <a>Дата:</a>
+
+                    <div class="input-group date">
+                        <input name="date" type="text" class="form-control"><span class="input-group-addon"><i
+                            class="glyphicon glyphicon-th"></i></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <a>Время с:</a>
+                    <input name="startTime" type="text" placeholder="c" class="form-control">
+                </div>
+                <div class="form-group">
+                    <a>по:</a>
+                    <input name="endTime" type="text" placeholder="по" class="form-control">
+                </div>
+
+                <%--<div class="btn-group">
+                    <p>Тренажор: </p>
+                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                        Выбрать тренажор: <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="">Тренажер №1</a></li>
+                        <li><a href="">Тренажер №2</a></li>
+                        <li><a href="">Тренажер №3</a></li>
+                        <li><a href="">Тренажер №4</a></li>
+                        <li><a href="">Тренажер №5</a></li>
+                        <li><a href="">Тренажер №6</a></li>
+                        <li><a href="">Тренажер №7</a></li>
+                        <li><a href="">Тренажер №8</a></li>
+                        <li><a href="">Массаж</a></li>
+                        <li><a href="">Консультация</a></li>
+                    </ul>
+                </div>--%>
 
 
-            <p>Назначил: имя того кто залогинился</p>
+<%--                <div class="form-group">
+                    <select name="session" class="form-control">
+                        <option value="1">Смена №1</option>
+                        <option value="2">Смена №2</option>
+                        <option value="3">Смена №3</option>
+                        <option value="4">Смена №4</option>
+                        <option value="5">Смена №5</option>
+                        <option value="6">Смена №6</option>
+                        <option value="7">Смена №7</option>
+                        <option value="8">Смена №8</option>
+                    </select>
+                </div>--%>
 
-            <p><a class="btn btn-default" href="#" role="button">Добавить</a></p>
 
+                <p>Назначил: имя того кто залогинился</p>
+                <div align="left">
+                    <button type="submit" class="btn btn-success" role="button" >Добавить</button>
+                </div>
 
+            </form>
         </div>
         <div class="col-md-9">
             <h2>График занятий</h2>
 
-            <p>Сюда нужно втулить график занятий. Библиотеку для графика я нашел.
+            <%--<p>Сюда нужно втулить график занятий. Библиотеку для графика я нашел.
                 <a href="http://almende.github.io/chap-links-library/js/timeline/examples/example15_mobile.html">Вот
                     пример. </a>
                 А вот <a href="http://almende.github.io/chap-links-library/timeline.html">описание библиотеки.</a>
                 <br/><a>Хе хе... скрипт втулил, жалко не тот что в примере, ну и настроить его нужно конечно.</a>
-            </p>
+            </p>--%>
             <!-- OPTIONAL: include this if you want history support -->
             <iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1'
                     style="position:absolute;width:0;height:0;border:0"></iframe>

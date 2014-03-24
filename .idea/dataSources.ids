@@ -20,11 +20,11 @@
     </table>
     <table name="EXERCISES" schema="" catalog="Kiparis" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="start" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
-      <column name="end" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
+      <column name="start" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <column name="end" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
       <column name="content" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <column name="group" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <column name="className" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="className" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="trainer" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
     </table>
   </data-source>
