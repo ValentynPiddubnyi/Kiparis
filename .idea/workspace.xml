@@ -3,17 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="649d161d-e491-4710-b2cc-1b4bbeb15f97" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/model/Contact.java" afterPath="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/model/Contact.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/dao/ContactDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/dao/ContactDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/dao/ContactDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/dao/ContactDAOImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/service/ContactService.java" afterPath="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/service/ContactService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/service/ContactServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/service/ContactServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/model/Exercise.java" afterPath="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/model/Exercise.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/web/controllers/ExerciseController.java" afterPath="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/web/controllers/ExerciseController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/exercisesTable.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/exercisesTable.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/TimeLine/js/timeline-min.js" afterPath="$PROJECT_DIR$/src/main/webapp/TimeLine/js/timeline-min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Kiparis.iws" />
@@ -121,7 +111,7 @@
       <file leaf-file-name="ExerciseController.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/web/controllers/ExerciseController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="30" selection-start="1130" selection-end="1130" vertical-scroll-proportion="0.6023316" vertical-offset="3" max-vertical-offset="1026">
+            <state line="37" column="30" selection-start="1130" selection-end="1130" vertical-scroll-proportion="0.45454547" vertical-offset="3" max-vertical-offset="1026">
               <folding />
             </state>
           </provider>
@@ -1081,7 +1071,7 @@
       <workItem from="1395301332395" duration="20218000" />
       <workItem from="1395507332158" duration="2510000" />
       <workItem from="1395653360175" duration="25738000" />
-      <workItem from="1395735041143" duration="13501000" />
+      <workItem from="1395735041143" duration="13682000" />
     </task>
     <task id="LOCAL-00001" summary="Added dataBase and in work! wow!">
       <created>1395052201718</created>
@@ -1103,11 +1093,15 @@
       <created>1395681293690</created>
       <updated>1395681293690</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Exercises connected to Contact as many-to-one">
+      <created>1395762641979</created>
+      <updated>1395762641979</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137919000" />
+    <option name="totallyTimeSpent" value="138100000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-4" width="1922" height="1205" extended-state="6" />
@@ -1125,7 +1119,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953465" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19210246" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23836657" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23836657" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953465" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1165,7 +1159,8 @@
     <MESSAGE value="TimeLine was added&#10;JSON was added and connected to java object&#10;" />
     <MESSAGE value="Code  added for holding Exercise object in DB" />
     <MESSAGE value="&quot;Adding new exercise&quot; was added" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Adding new exercise&quot; was added" />
+    <MESSAGE value="Exercises connected to Contact as many-to-one" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exercises connected to Contact as many-to-one" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1519,7 +1514,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/web/controllers/ExerciseController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="30" selection-start="1130" selection-end="1130" vertical-scroll-proportion="0.6023316" vertical-offset="3" max-vertical-offset="1026">
+        <state line="37" column="30" selection-start="1130" selection-end="1130" vertical-scroll-proportion="0.45454547" vertical-offset="3" max-vertical-offset="1026">
           <folding />
         </state>
       </provider>
