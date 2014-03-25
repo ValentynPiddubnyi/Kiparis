@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
@@ -80,7 +81,12 @@
                 <h2>Добавить занятие</h2>
 
                 <div class="form-group">
-                    <input name="pacientName" type="text" placeholder="Имя пациента" class="form-control">
+                    <%--<input name="pacientName" type="text" placeholder="Имя пациента" class="form-control">--%>
+                    <select name="contactId" class="form-control">
+                        <c:forEach items="${contacts}" var="contact">
+                            <option value="${contact.pacientNumber}">${contact.secondName} ${contact.firstName}</option>
+                        </c:forEach>
+                    </select>
                 </div>
 
                 <div class="form-group">

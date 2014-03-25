@@ -49,14 +49,6 @@ public class Contact {
     public Contact() {
     }
 
-    public Integer getPacientNumber() {
-        return pacientNumber;
-    }
-
-    public void setPacientNumber(Integer pacientNumber) {
-        this.pacientNumber = pacientNumber;
-    }
-
     public Contact(Integer pacientNumber, String firstName, String secondName, String thirdName, Date birthday,
                    Diagnosis diagnosis, Integer exercisesPassed, String profession) {
         this.pacientNumber = pacientNumber;
@@ -138,5 +130,14 @@ public class Contact {
     public Date getCreated() {
         return created;
     }
+    public Integer getPacientNumber() {
+        return pacientNumber;
+    }
+
+    public void setPacientNumber(Integer pacientNumber) {
+        this.pacientNumber = pacientNumber;
+    }
+
+
 }
 

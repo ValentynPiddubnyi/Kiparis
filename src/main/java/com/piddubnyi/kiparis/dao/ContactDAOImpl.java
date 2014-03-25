@@ -38,4 +38,9 @@ public class ContactDAOImpl implements ContactDAO {
         }
 
     }
+
+    @Override
+    public Contact findById(Integer id) {
+        return (Contact) sessionFactory.getCurrentSession().get(Contact.class, id);
+    }
 }

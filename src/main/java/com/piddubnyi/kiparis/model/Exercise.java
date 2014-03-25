@@ -28,15 +28,19 @@ public class Exercise {
     @Column(name = "trainer")
     private String group = null;
     private String className = null;
+    @ManyToOne
+    @JoinColumn(name = "CONTACT_ID")
+    private Contact contact;
 
     public Exercise(){}
 
-    public Exercise(Date start, Date end, String content, String trainer, String className) {
+    public Exercise(Contact contact, Date start, Date end, String trainer, String className) {
+        this.contact = contact;
         this.start = start;
         this.end = end;
-        this.content = content;
         this.group = trainer;
         this.className = className;
+        this.content = contact.getSecondName() + " " + contact.getFirstName();
     }
 
     public Integer getId() {
@@ -85,5 +89,13 @@ public class Exercise {
 
     public void setClassName(String className) {
         this.className = className;
+    }
+
+    public Contact getContact() {
+        return contact;
+    }
+
+    public void setContact(Contact contact) {
+        this.contact = contact;
     }
 }
