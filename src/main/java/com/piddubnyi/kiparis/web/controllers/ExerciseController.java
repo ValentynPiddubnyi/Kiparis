@@ -2,6 +2,7 @@ package com.piddubnyi.kiparis.web.controllers;
 
 import com.piddubnyi.kiparis.model.Contact;
 import com.piddubnyi.kiparis.model.Exercise;
+import com.piddubnyi.kiparis.model.ExerciseVO;
 import com.piddubnyi.kiparis.service.ContactService;
 import com.piddubnyi.kiparis.service.ExerciseService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,11 +53,12 @@ public class ExerciseController {
 
         Exercise exercise = new Exercise(contactService.findById(contactId),startDate, endDate, trainer, "available");
         exerciseService.addExercise(exercise);
+
         return "redirect:/";
     }
 
     @RequestMapping(value = "/exercisesDataJson", method = RequestMethod.GET)
-    public @ResponseBody List<Exercise> exercisesDataJson(ModelMap model){
-        return exerciseService.listExercises();
+    public @ResponseBody List<ExerciseVO> exercisesDataJson(ModelMap model){
+        return exerciseService.listExercisesVO();
     }
 }

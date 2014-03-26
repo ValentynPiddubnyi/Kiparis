@@ -6,7 +6,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Random;
+import java.util.Set;
 
 /**
  * Created by Fil on 07/03/14.
@@ -45,6 +47,9 @@ public class Contact {
     private String profession = null;
     @Temporal(TemporalType.TIMESTAMP)
     private Date created;
+    //@OneToMany(mappedBy = "contact", cascade = CascadeType.ALL, orphanRemoval = true)
+    @Transient
+    private Set<Exercise> linkedExercises = new HashSet<Exercise>();
 
     public Contact() {
     }
@@ -130,6 +135,7 @@ public class Contact {
     public Date getCreated() {
         return created;
     }
+
     public Integer getPacientNumber() {
         return pacientNumber;
     }
@@ -138,6 +144,12 @@ public class Contact {
         this.pacientNumber = pacientNumber;
     }
 
+    public Set<Exercise> getLinkedExercises() {
+        return linkedExercises;
+    }
 
+    public void setLinkedExercises(Set<Exercise> linkedExercises) {
+        this.linkedExercises = linkedExercises;
+    }
 }
 

@@ -1,6 +1,7 @@
 package com.piddubnyi.kiparis.service;
 
 import com.piddubnyi.kiparis.model.Exercise;
+import com.piddubnyi.kiparis.model.ExerciseVO;
 
 import java.util.List;
 
@@ -11,4 +12,6 @@ public interface ExerciseService {
     public void addExercise(Exercise exercise);
     public List<Exercise> listExercises();
     public void removeExercise(Integer id);
+
+    public List<ExerciseVO> listExercisesVO();
 }

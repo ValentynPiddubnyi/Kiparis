@@ -2,9 +2,11 @@ package com.piddubnyi.kiparis.service;
 
 import com.piddubnyi.kiparis.dao.ExerciseDAO;
 import com.piddubnyi.kiparis.model.Exercise;
+import com.piddubnyi.kiparis.model.ExerciseVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -29,5 +31,14 @@ public class ExerciseServiceImpl implements ExerciseService {
     @Override
     public void removeExercise(Integer id) {
         exerciseDAO.removeExercise(id);
+    }
+
+    public List<ExerciseVO> listExercisesVO(){
+        List<ExerciseVO> listExercisesVO = new ArrayList<ExerciseVO>();
+        for (Exercise exercise : exerciseDAO.listExercise()) {
+            listExercisesVO.add(new ExerciseVO(exercise.getId(),exercise.getStart(),exercise.getEnd(),
+                    exercise.getContent(),exercise.getGroup(),exercise.getClassName()));
+        }
+        return listExercisesVO;
     }
 }
