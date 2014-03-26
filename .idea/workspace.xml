@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="649d161d-e491-4710-b2cc-1b4bbeb15f97" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/model/ExerciseVO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/model/Contact.java" afterPath="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/model/Contact.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/web/controllers/ExerciseController.java" afterPath="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/web/controllers/ExerciseController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/service/ExerciseService.java" afterPath="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/service/ExerciseService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/service/ExerciseServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/service/ExerciseServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/model/Exercise.java" afterPath="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/model/Exercise.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/web/controllers/PatientController.java" afterPath="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/web/controllers/PatientController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Kiparis.iws" />
@@ -76,8 +76,60 @@
       <file leaf-file-name="Exercise.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/model/Exercise.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="34" selection-start="580" selection-end="770" vertical-scroll-proportion="0.0" vertical-offset="196" max-vertical-offset="1350">
+            <state line="27" column="14" selection-start="685" selection-end="685" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1368">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Contact.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/model/Contact.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="63" column="26" selection-start="1640" selection-end="1658" vertical-scroll-proportion="0.0" vertical-offset="792" max-vertical-offset="2196">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1134#1144#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contactList.jsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/contactList.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="151" column="48" selection-start="6234" selection-end="6234" vertical-scroll-proportion="0.33395177" vertical-offset="2538" max-vertical-offset="3762">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="4" selection-start="483" selection-end="483" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="738">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mvc-dispatcher-servlet.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="54" selection-start="2831" selection-end="2831" vertical-scroll-proportion="0.0" vertical-offset="712" max-vertical-offset="1350">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContactDAOImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/dao/ContactDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="0" selection-start="1110" selection-end="1110" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="828">
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,52 +137,41 @@
       <file leaf-file-name="ExerciseVO.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/model/ExerciseVO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="21" selection-start="483" selection-end="483" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1458">
+            <state line="19" column="21" selection-start="483" selection-end="483" vertical-scroll-proportion="0.0" vertical-offset="42" max-vertical-offset="1026">
               <folding>
-                <element signature="e#666#667#0" expanded="true" />
-                <element signature="e#691#692#0" expanded="true" />
-                <element signature="e#728#729#0" expanded="true" />
-                <element signature="e#756#757#0" expanded="true" />
-                <element signature="e#786#787#0" expanded="true" />
-                <element signature="e#814#815#0" expanded="true" />
-                <element signature="e#854#855#0" expanded="true" />
-                <element signature="e#888#889#0" expanded="true" />
-                <element signature="e#916#917#0" expanded="true" />
-                <element signature="e#942#943#0" expanded="true" />
-                <element signature="e#978#979#0" expanded="true" />
-                <element signature="e#1008#1009#0" expanded="true" />
-                <element signature="e#1042#1043#0" expanded="true" />
-                <element signature="e#1072#1073#0" expanded="true" />
-                <element signature="e#1118#1119#0" expanded="true" />
-                <element signature="e#1156#1157#0" expanded="true" />
-                <element signature="e#1188#1189#0" expanded="true" />
-                <element signature="e#1216#1217#0" expanded="true" />
-                <element signature="e#1258#1259#0" expanded="true" />
-                <element signature="e#1292#1293#0" expanded="true" />
-                <element signature="e#1328#1329#0" expanded="true" />
-                <element signature="e#1360#1361#0" expanded="true" />
-                <element signature="e#1410#1411#0" expanded="true" />
-                <element signature="e#1452#1453#0" expanded="true" />
+                <element signature="e#666#667#0" expanded="false" />
+                <element signature="e#691#692#0" expanded="false" />
+                <element signature="e#728#729#0" expanded="false" />
+                <element signature="e#756#757#0" expanded="false" />
+                <element signature="e#786#787#0" expanded="false" />
+                <element signature="e#814#815#0" expanded="false" />
+                <element signature="e#854#855#0" expanded="false" />
+                <element signature="e#888#889#0" expanded="false" />
+                <element signature="e#916#917#0" expanded="false" />
+                <element signature="e#942#943#0" expanded="false" />
+                <element signature="e#978#979#0" expanded="false" />
+                <element signature="e#1008#1009#0" expanded="false" />
+                <element signature="e#1042#1043#0" expanded="false" />
+                <element signature="e#1072#1073#0" expanded="false" />
+                <element signature="e#1118#1119#0" expanded="false" />
+                <element signature="e#1156#1157#0" expanded="false" />
+                <element signature="e#1188#1189#0" expanded="false" />
+                <element signature="e#1216#1217#0" expanded="false" />
+                <element signature="e#1258#1259#0" expanded="false" />
+                <element signature="e#1292#1293#0" expanded="false" />
+                <element signature="e#1328#1329#0" expanded="false" />
+                <element signature="e#1360#1361#0" expanded="false" />
+                <element signature="e#1410#1411#0" expanded="false" />
+                <element signature="e#1452#1453#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExerciseServiceImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/service/ExerciseServiceImpl.java">
+      <file leaf-file-name="PatientController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/web/controllers/PatientController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="13" selection-start="730" selection-end="730" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="774">
-              <folding>
-                <element signature="e#926#938#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExerciseController.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/web/controllers/ExerciseController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="0" selection-start="2360" selection-end="2360" vertical-scroll-proportion="0.8601036" vertical-offset="272" max-vertical-offset="1044">
+            <state line="13" column="34" selection-start="608" selection-end="608" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1188">
               <folding />
             </state>
           </provider>
@@ -156,7 +197,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/HelloController.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/piddubnyi/kiparis/AppTests.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/web/controllers/PatientCotroller.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/model/Diagnosis.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/web/controllers/HelloController.java" />
@@ -177,8 +217,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/test.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/TimeLine/js/jquery-2.0.2.min.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/menu.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/web/controllers/PatientController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/service/ExercisesListService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/TimeLine/data.json" />
         <option value="$PROJECT_DIR$/src/main/webapp/CV.html" />
@@ -188,7 +226,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/dao/ExerciseDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/dao/ExerciseDAOImpl.java" />
         <option value="dbtable:/eb7cf089/5b72a122-89d7-4870-9aca-5ba30fb2bd7d/Kiparis..EXERCISES" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/contactList.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/TimeLine/js/timeline-min.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/TimeLine/js/main.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
@@ -197,12 +234,18 @@
         <option value="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/dao/ContactDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/service/ContactServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/exercisesTable.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/model/Contact.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/model/Exercise.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/model/ExerciseVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/service/ExerciseServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/service/ExerciseService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/web/controllers/ExerciseController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/web/controllers/PatientController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/TimeLine/example15_mobile.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/MyOSIVFilter.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/model/Exercise.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/model/Contact.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/contactList.jsp" />
       </list>
     </option>
   </component>
@@ -559,10 +602,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="kiparis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1087,7 +1126,7 @@
       <workItem from="1395507332158" duration="2510000" />
       <workItem from="1395653360175" duration="25738000" />
       <workItem from="1395735041143" duration="17728000" />
-      <workItem from="1395821175522" duration="3251000" />
+      <workItem from="1395821175522" duration="16074000" />
     </task>
     <task id="LOCAL-00001" summary="Added dataBase and in work! wow!">
       <created>1395052201718</created>
@@ -1121,11 +1160,15 @@
       <created>1395762777063</created>
       <updated>1395762777063</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="ExerciseVO object and listExercisesVO was added. Goal is sending only required information to JSON">
+      <created>1395825313194</created>
+      <updated>1395825313194</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145397000" />
+    <option name="totallyTimeSpent" value="158220000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-4" width="1922" height="1205" extended-state="6" />
@@ -1133,28 +1176,29 @@
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27540362" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953465" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23372465" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23372465" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39981008" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23692636" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23836657" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953465" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953465" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924226" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953465" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19210246" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23836657" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19210246" sideWeight="0.49917898" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42165244" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953465" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953465" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39981008" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19210246" sideWeight="0.500821" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953465" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19210246" sideWeight="0.500821" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924226" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19156884" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32953465" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
@@ -1162,7 +1206,6 @@
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953465" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953465" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39981008" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1185,7 +1228,8 @@
     <MESSAGE value="&quot;Adding new exercise&quot; was added" />
     <MESSAGE value="Exercises connected to Contact as many-to-one" />
     <MESSAGE value="Exercises connected to Contact as many-to-one&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exercises connected to Contact as many-to-one&#10;" />
+    <MESSAGE value="ExerciseVO object and listExercisesVO was added. Goal is sending only required information to JSON" />
+    <option name="LAST_COMMIT_MESSAGE" value="ExerciseVO object and listExercisesVO was added. Goal is sending only required information to JSON" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1199,16 +1243,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/TimeLine/img/16/moveleft.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/TimeLine/img/16/delete.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/TimeLine/img/32/delete.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1217,18 +1251,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/TimeLine/js/jquery-2.0.2.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1700" column="268" selection-start="98209" selection-end="98212" vertical-scroll-proportion="0.33333334" vertical-offset="30357" max-vertical-offset="36882" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/TimeLine/example15_mobile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="55" selection-start="103" selection-end="103" vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="396" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="27" selection-start="5309" selection-end="5309" vertical-scroll-proportion="0.0" vertical-offset="1961" max-vertical-offset="2970">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="dbDummy://db-console:/eb7cf089/5b72a122-89d7-4870-9aca-5ba30fb2bd7d/">
@@ -1263,13 +1285,6 @@
         <state line="21" column="28" selection-start="1066" selection-end="1066" vertical-scroll-proportion="0.63265306" vertical-offset="19" max-vertical-offset="558" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/dao/ExerciseDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="47" selection-start="321" selection-end="321" vertical-scroll-proportion="0.26506025" vertical-offset="0" max-vertical-offset="747">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar!/java/util/Date.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="110" column="16" selection-start="2694" selection-end="2694" vertical-scroll-proportion="2.5849802" vertical-offset="0" max-vertical-offset="3564" />
@@ -1293,19 +1308,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jdbc.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="52" selection-start="144" selection-end="144" vertical-scroll-proportion="0.046632126" vertical-offset="0" max-vertical-offset="772" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/dao/ContactDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="39" selection-start="342" selection-end="342" vertical-scroll-proportion="0.31325302" vertical-offset="0" max-vertical-offset="747">
+        <state line="2" column="52" selection-start="144" selection-end="144" vertical-scroll-proportion="0.046632126" vertical-offset="0" max-vertical-offset="772">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/contactList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="167" column="55" selection-start="7139" selection-end="7163" vertical-scroll-proportion="-13.333333" vertical-offset="2646" max-vertical-offset="3762" />
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/4.3.4.Final/hibernate-core-4.3.4.Final.jar!/org/hibernate/Session.class">
@@ -1316,13 +1321,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/service/ContactService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="16" selection-start="283" selection-end="283" vertical-scroll-proportion="0.34315425" vertical-offset="0" max-vertical-offset="577">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/dao/ContactDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="0" selection-start="1110" selection-end="1110" vertical-scroll-proportion="0.0" vertical-offset="226" max-vertical-offset="828">
           <folding />
         </state>
       </provider>
@@ -1416,31 +1414,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="20" selection-start="3267" selection-end="3267" vertical-scroll-proportion="1.3487738" vertical-offset="0" max-vertical-offset="1350">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/web/controllers/PatientController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="27" selection-start="1705" selection-end="1705" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="954">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/eb7cf089/5b72a122-89d7-4870-9aca-5ba30fb2bd7d/Kiparis..CONTACTS">
       <provider editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288" />
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/eb7cf089/5b72a122-89d7-4870-9aca-5ba30fb2bd7d/Kiparis..EXERCISES">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="252" />
       </provider>
       <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
         <state />
@@ -1453,55 +1429,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/model/Contact.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="14" selection-start="1314" selection-end="1314" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="2070">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/TimeLine/data.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="121" column="5" selection-start="3010" selection-end="3010" vertical-scroll-proportion="0.0" vertical-offset="2178" max-vertical-offset="2286">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/model/ExerciseVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="21" selection-start="483" selection-end="483" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1458">
-          <folding>
-            <element signature="e#666#667#0" expanded="true" />
-            <element signature="e#691#692#0" expanded="true" />
-            <element signature="e#728#729#0" expanded="true" />
-            <element signature="e#756#757#0" expanded="true" />
-            <element signature="e#786#787#0" expanded="true" />
-            <element signature="e#814#815#0" expanded="true" />
-            <element signature="e#854#855#0" expanded="true" />
-            <element signature="e#888#889#0" expanded="true" />
-            <element signature="e#916#917#0" expanded="true" />
-            <element signature="e#942#943#0" expanded="true" />
-            <element signature="e#978#979#0" expanded="true" />
-            <element signature="e#1008#1009#0" expanded="true" />
-            <element signature="e#1042#1043#0" expanded="true" />
-            <element signature="e#1072#1073#0" expanded="true" />
-            <element signature="e#1118#1119#0" expanded="true" />
-            <element signature="e#1156#1157#0" expanded="true" />
-            <element signature="e#1188#1189#0" expanded="true" />
-            <element signature="e#1216#1217#0" expanded="true" />
-            <element signature="e#1258#1259#0" expanded="true" />
-            <element signature="e#1292#1293#0" expanded="true" />
-            <element signature="e#1328#1329#0" expanded="true" />
-            <element signature="e#1360#1361#0" expanded="true" />
-            <element signature="e#1410#1411#0" expanded="true" />
-            <element signature="e#1452#1453#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/model/Exercise.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="34" selection-start="580" selection-end="770" vertical-scroll-proportion="0.0" vertical-offset="196" max-vertical-offset="1350">
           <folding />
         </state>
       </provider>
@@ -1517,14 +1447,140 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="13" selection-start="730" selection-end="730" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="774">
           <folding>
-            <element signature="e#926#938#0" expanded="true" />
+            <element signature="e#926#938#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/web/controllers/ExerciseController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="0" selection-start="2360" selection-end="2360" vertical-scroll-proportion="0.8601036" vertical-offset="272" max-vertical-offset="1044">
+        <state line="64" column="0" selection-start="2360" selection-end="2360" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="1044">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/eb7cf089/5b72a122-89d7-4870-9aca-5ba30fb2bd7d/Kiparis..EXERCISES">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="252">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/model/ExerciseVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="21" selection-start="483" selection-end="483" vertical-scroll-proportion="0.0" vertical-offset="42" max-vertical-offset="1026">
+          <folding>
+            <element signature="e#666#667#0" expanded="false" />
+            <element signature="e#691#692#0" expanded="false" />
+            <element signature="e#728#729#0" expanded="false" />
+            <element signature="e#756#757#0" expanded="false" />
+            <element signature="e#786#787#0" expanded="false" />
+            <element signature="e#814#815#0" expanded="false" />
+            <element signature="e#854#855#0" expanded="false" />
+            <element signature="e#888#889#0" expanded="false" />
+            <element signature="e#916#917#0" expanded="false" />
+            <element signature="e#942#943#0" expanded="false" />
+            <element signature="e#978#979#0" expanded="false" />
+            <element signature="e#1008#1009#0" expanded="false" />
+            <element signature="e#1042#1043#0" expanded="false" />
+            <element signature="e#1072#1073#0" expanded="false" />
+            <element signature="e#1118#1119#0" expanded="false" />
+            <element signature="e#1156#1157#0" expanded="false" />
+            <element signature="e#1188#1189#0" expanded="false" />
+            <element signature="e#1216#1217#0" expanded="false" />
+            <element signature="e#1258#1259#0" expanded="false" />
+            <element signature="e#1292#1293#0" expanded="false" />
+            <element signature="e#1328#1329#0" expanded="false" />
+            <element signature="e#1360#1361#0" expanded="false" />
+            <element signature="e#1410#1411#0" expanded="false" />
+            <element signature="e#1452#1453#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/web/controllers/PatientController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="34" selection-start="608" selection-end="608" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1188">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/dao/ExerciseDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="47" selection-start="321" selection-end="321" vertical-scroll-proportion="0.2672065" vertical-offset="0" max-vertical-offset="741">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/dao/ContactDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="39" selection-start="342" selection-end="342" vertical-scroll-proportion="0.31578946" vertical-offset="0" max-vertical-offset="741">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/dao/ContactDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="0" selection-start="1110" selection-end="1110" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="828">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/TimeLine/example15_mobile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="55" selection-start="103" selection-end="103" vertical-scroll-proportion="0.086538464" vertical-offset="0" max-vertical-offset="624">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="62" selection-start="494" selection-end="494" vertical-scroll-proportion="0.32786885" vertical-offset="0" max-vertical-offset="2988">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="54" selection-start="2831" selection-end="2831" vertical-scroll-proportion="0.0" vertical-offset="712" max-vertical-offset="1350">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="4" selection-start="483" selection-end="483" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="738">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/model/Exercise.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="14" selection-start="685" selection-end="685" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1368">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/model/Contact.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="26" selection-start="1640" selection-end="1658" vertical-scroll-proportion="0.0" vertical-offset="792" max-vertical-offset="2196">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1134#1144#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/contactList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="151" column="48" selection-start="6234" selection-end="6234" vertical-scroll-proportion="0.33395177" vertical-offset="2538" max-vertical-offset="3762">
           <folding />
         </state>
       </provider>

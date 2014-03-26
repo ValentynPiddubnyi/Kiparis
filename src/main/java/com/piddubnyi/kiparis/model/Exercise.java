@@ -1,8 +1,5 @@
 package com.piddubnyi.kiparis.model;
 
-import org.springframework.format.annotation.DateTimeFormat;
-
-import javax.lang.model.element.Name;
 import javax.persistence.*;
 import java.util.Date;
 

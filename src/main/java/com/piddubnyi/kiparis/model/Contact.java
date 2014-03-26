@@ -1,13 +1,10 @@
 package com.piddubnyi.kiparis.model;
 
-import com.piddubnyi.kiparis.model.Diagnosis;
 import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.*;
 import java.util.Date;
 import java.util.HashSet;
-import java.util.Random;
 import java.util.Set;
 
 /**
@@ -38,34 +35,35 @@ public class Contact {
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "dd/MM/yyyy")
     private Date birthday = null;
+
     @Transient
     private Diagnosis diagnosis = null;
-    @Transient
-    Random rn = new Random();
-    @Transient
-    private Integer exercisesPassed = rn.nextInt();
+
     private String profession = null;
+
     @Temporal(TemporalType.TIMESTAMP)
     private Date created;
-    //@OneToMany(mappedBy = "contact", cascade = CascadeType.ALL, orphanRemoval = true)
-    @Transient
+
+    @OneToMany(mappedBy = "contact", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<Exercise> linkedExercises = new HashSet<Exercise>();
 
     public Contact() {
     }
 
     public Contact(Integer pacientNumber, String firstName, String secondName, String thirdName, Date birthday,
-                   Diagnosis diagnosis, Integer exercisesPassed, String profession) {
+                   Diagnosis diagnosis, String profession) {
         this.pacientNumber = pacientNumber;
         this.firstName = firstName;
         this.secondName = secondName;
         this.thirdName = thirdName;
         this.birthday = birthday;
         this.diagnosis = diagnosis;
-        this.exercisesPassed = exercisesPassed;
         this.profession = profession;
     }
 
+    public Integer getExercisesPassed() {
+       return linkedExercises.size();
+    }
 
     public String getFirstName() {
         return firstName;
@@ -107,14 +105,6 @@ public class Contact {
         this.diagnosis = diagnosis;
     }
 
-    public Integer getExercisesPassed() {
-        return exercisesPassed;
-    }
-
-    public void setExercisesPassed(Integer exercisesPassed) {
-        this.exercisesPassed = exercisesPassed;
-    }
-
     public String getPhoto() {
         return photo;
     }
@@ -145,11 +135,20 @@ public class Contact {
     }
 
     public Set<Exercise> getLinkedExercises() {
-        return linkedExercises;
+        return this.linkedExercises;
     }
 
     public void setLinkedExercises(Set<Exercise> linkedExercises) {
         this.linkedExercises = linkedExercises;
+    }
+
+    public void addLinkedExercises(Exercise exercise){
+        exercise.setContact(this);
+        getLinkedExercises().add(exercise);
+    }
+
+    public void removeLinkedExercises(Exercise exercise){
+        getLinkedExercises().remove(exercise);
     }
 }
 

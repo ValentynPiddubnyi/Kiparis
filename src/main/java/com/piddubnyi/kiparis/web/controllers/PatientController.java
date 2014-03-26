@@ -11,9 +11,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpSession;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -42,7 +40,7 @@ public class PatientController {
                              @RequestParam String midleName, @RequestParam Diagnosis diagnosis, @RequestParam String profession,
                              @RequestParam @PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date date) {
 
-        Contact contact = new Contact(1, lastName, firstNameFake, midleName, date, diagnosis, 1, profession);
+        Contact contact = new Contact(1, lastName, firstNameFake, midleName, date, diagnosis, profession);
         contactService.addContact(contact);
         return "redirect:/patients";
     }
