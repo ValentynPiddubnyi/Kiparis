@@ -65,6 +65,9 @@ public class Contact {
     @OneToMany(mappedBy = "contact", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<Exercise> linkedExercises = new HashSet<Exercise>();
 
+    @OneToMany(mappedBy = "contact", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<Comment> linkedComments = new HashSet<Comment>();
+
     public Contact() {
     }
 
@@ -77,6 +80,23 @@ public class Contact {
         this.birthday = birthday;
         this.diagnosis = diagnosis;
         this.profession = profession;
+    }
+
+    public Set<Comment> getLinkedComments() {
+        return this.linkedComments;
+    }
+
+    public void setLinkedComments(Set<Comment> linkedComments) {
+        this.linkedComments = linkedComments;
+    }
+
+    public void addLinkedComments(Comment comment){
+        comment.setContact(this);
+        linkedComments.add(comment);
+    }
+
+    public  void removeLinkedComments(Comment comment){
+        linkedComments.remove(comment);
     }
 
     public Integer getExercisesPassed() {
