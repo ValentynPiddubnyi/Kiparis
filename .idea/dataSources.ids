@@ -16,6 +16,30 @@
       <column name="birthday" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91"/>
       <column name="exercisesPassed" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
       <column name="profession" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="phone" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="complaints" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="discharge" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="EMPLOYEE" schema="" catalog="Kiparis" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="firstName" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="secondName" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="thirdName" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="birthday" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91"/>
+      <column name="education" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="phone" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="workExperience" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="salary" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="address" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="firstWorkDay" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91"/>
+      <column name="lastWorkDay" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91"/>
+      <column name="created" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA=" version="true"/>
+      <column name="rating" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="recommendation" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="sellaryCoefficient" sqlType="FLOAT" length="12" precision="0" nullable="true" jdbcType="7"/>
       <primary-key name="PRIMARY" columns="id"/>
     </table>
     <table name="EXERCISES" schema="" catalog="Kiparis" type="TABLE">
@@ -26,6 +50,7 @@
       <column name="className" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
       <column name="trainer" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
       <column name="contact_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="employee_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="id"/>
     </table>
   </data-source>

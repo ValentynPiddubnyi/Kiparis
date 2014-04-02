@@ -140,7 +140,6 @@ public class Contact {
         this.photo = photo;
     }
 
-
     public String getProfession() {
         return profession;
     }

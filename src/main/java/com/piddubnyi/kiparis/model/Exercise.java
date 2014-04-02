@@ -10,24 +10,28 @@ import java.util.Date;
 @Table(name = "EXERCISES")
 public class Exercise {
 
-/*    private String start = "2014-03-20T14:00:00";
-    private String end = "2014-03-20T21:51:00";
-    private String content = "Available";
-    private String group = "Trenagor1";
-    private String className = "available";*/
-
     @Id
     @GeneratedValue
     private Integer id = null;
+
     private Date start = null;
+
     private Date end = null;
+
     private String content = null;
+
     @Column(name = "trainer")
     private String group = null;
+
     private String className = null;
+
     @ManyToOne
     @JoinColumn(name = "CONTACT_ID")
     private Contact contact;
+
+    @ManyToOne
+    @JoinColumn(name = "EMPLOYEE_ID")
+    private Employee employee;
 
     public Exercise(){}
 
@@ -94,5 +98,13 @@ public class Exercise {
 
     public void setContact(Contact contact) {
         this.contact = contact;
+    }
+
+    public Employee getEmployee() {
+        return this.employee;
+    }
+
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
     }
 }
