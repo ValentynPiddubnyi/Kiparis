@@ -21,23 +21,6 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-    <!-- Confiring deleting alert function -->
-    <script language="javascript">
-        function deletePatient(removeID){
-            var doIt=confirm('Do you want to delete the patient?');
-            if(doIt){
-                var f=document.form;
-                f.method="post";
-                f.action='../patients/remove?removeID='+removeID;
-                f.submit();
-            }
-            else{
-
-            }
-        }
-    </script>
-
 </head>
 <body>
 
@@ -144,7 +127,7 @@
                 <table class="table">
                     <thead>
                     <tr>
-                        <td><b>Удалить</b></td>
+                        <td><b></b></td>
                         <td><b>ID</b></td>
                         <td><b>Фото</b></td>
                         <td><b>Фамилия</b></td>
@@ -160,12 +143,36 @@
                     <c:forEach items="${contacts}" var="contact">
                         <tr>
                             <td>
-                                <form action="/patients/remove" method="post">
-                                    <%--<input name="removeID"  type="hidden" value="${contact.pacientNumber}">--%>
-                                    <button type="button" class="btn btn-danger btn-sm" role="button" onclick="deletePatient(${contact.pacientNumber})">X</button>
-                                </form>
+
+                                    <!-- Button trigger modal -->
+                                    <button class="btn btn-warning" data-toggle="modal" data-target="#myModal">
+                                        <span class="glyphicon glyphicon-pencil"></span>
+                                    </button>
+                                    <!-- Delete Patient -->
+                                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                    <h4 class="modal-title" id="myModalLabel">Подтвердите:</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <h4 class="modal-body">Вы действительно хотите удалить пациента ${contact.secondName} ${contact.firstName}?</h4>
+                                                </div>
+                                                <div class="modal-footer">
+
+                                                    <form action="/patients/remove" method="post">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+                                                        <input name="removeID"  type="hidden" value="${contact.id}">
+                                                    <button type="submit" class="btn btn-danger">Удалить</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                             </td>
-                            <td>${contact.pacientNumber}</td>
+                            <td>${contact.id}</td>
                             <td>${contact.photo}</td>
                             <td>${contact.firstName}</td>
                             <td>${contact.secondName}</td>

@@ -40,6 +40,12 @@ public class ContactDAOImpl implements ContactDAO {
     }
 
     @Override
+    public Contact save(Contact contact) {
+        sessionFactory.getCurrentSession().saveOrUpdate(contact);
+        return contact;
+    }
+
+    @Override
     public Contact findById(Integer id) {
         return (Contact) sessionFactory.getCurrentSession().get(Contact.class, id);
     }

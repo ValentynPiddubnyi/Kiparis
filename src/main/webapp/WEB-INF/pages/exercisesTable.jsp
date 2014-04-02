@@ -84,7 +84,7 @@
                     <%--<input name="pacientName" type="text" placeholder="Имя пациента" class="form-control">--%>
                     <select name="contactId" class="form-control">
                         <c:forEach items="${contacts}" var="contact">
-                            <option value="${contact.pacientNumber}">${contact.secondName} ${contact.firstName}</option>
+                            <option value="${contact.id}">${contact.secondName} ${contact.firstName}</option>
                         </c:forEach>
                     </select>
                 </div>

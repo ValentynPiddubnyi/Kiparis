@@ -5,6 +5,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.*;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -17,7 +18,7 @@ public class Contact {
     @Id
     @Column(name = "ID")
     @GeneratedValue
-    private Integer pacientNumber = null;
+    private Integer id = null;
 
     @Transient
     private String photo = "link to photo";
@@ -41,6 +42,23 @@ public class Contact {
 
     private String profession = null;
 
+    private String phone = null;
+
+    private String email = null;
+
+    private String complaints = null;
+
+    private Integer discharge = null;
+
+    @Transient
+    private String backPhotos = "Back photos";
+
+    @Transient
+    private List<Comment> listCommentsPublick;
+
+    @Transient
+    private List<Contact> listCommentsPrivate;
+
     @Temporal(TemporalType.TIMESTAMP)
     private Date created;
 
@@ -50,9 +68,9 @@ public class Contact {
     public Contact() {
     }
 
-    public Contact(Integer pacientNumber, String firstName, String secondName, String thirdName, Date birthday,
+    public Contact(Integer id, String firstName, String secondName, String thirdName, Date birthday,
                    Diagnosis diagnosis, String profession) {
-        this.pacientNumber = pacientNumber;
+        this.id = id;
         this.firstName = firstName;
         this.secondName = secondName;
         this.thirdName = thirdName;
@@ -63,6 +81,15 @@ public class Contact {
 
     public Integer getExercisesPassed() {
        return linkedExercises.size();
+    }
+
+    public void addLinkedExercises(Exercise exercise){
+        exercise.setContact(this);
+        getLinkedExercises().add(exercise);
+    }
+
+    public void removeLinkedExercises(Exercise exercise){
+        getLinkedExercises().remove(exercise);
     }
 
     public String getFirstName() {
@@ -126,12 +153,12 @@ public class Contact {
         return created;
     }
 
-    public Integer getPacientNumber() {
-        return pacientNumber;
+    public Integer getId() {
+        return id;
     }
 
-    public void setPacientNumber(Integer pacientNumber) {
-        this.pacientNumber = pacientNumber;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public Set<Exercise> getLinkedExercises() {
@@ -142,13 +169,36 @@ public class Contact {
         this.linkedExercises = linkedExercises;
     }
 
-    public void addLinkedExercises(Exercise exercise){
-        exercise.setContact(this);
-        getLinkedExercises().add(exercise);
+    public String getPhone() {
+        return phone;
     }
 
-    public void removeLinkedExercises(Exercise exercise){
-        getLinkedExercises().remove(exercise);
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getComplaints() {
+        return complaints;
+    }
+
+    public void setComplaints(String complaints) {
+        this.complaints = complaints;
+    }
+
+    public Integer getDischarge() {
+        return discharge;
+    }
+
+    public void setDischarge(Integer discharge) {
+        this.discharge = discharge;
     }
 }
 
