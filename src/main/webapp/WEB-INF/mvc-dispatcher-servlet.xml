@@ -66,4 +66,5 @@
 
     <bean id="persistenceExceptionTranslationPostProcessor"
           class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
+    <import resource="security-context.xml"/>
 </beans>
