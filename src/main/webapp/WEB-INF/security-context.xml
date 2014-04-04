@@ -8,10 +8,10 @@
 	http://www.springframework.org/schema/security/spring-security-3.2.xsd">
 
     <http auto-config="true">
-        <intercept-url pattern="/*" access="ROLE_USER" />
-        <!--<form-login login-page="/patients" authentication-failure-url="/security/loginfail"
-                    default-target-url="/patients" />
-        <logout logout-success-url="/patients" />-->
+        <intercept-url pattern="/" access="ROLE_USER" />
+        <form-login login-page="/login" authentication-failure-url="/loginfailed"
+                    default-target-url="/" />
+        <logout logout-success-url="/logout" />
     </http>
 
     <authentication-manager>

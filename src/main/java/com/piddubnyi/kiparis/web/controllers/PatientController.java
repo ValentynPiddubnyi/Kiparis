@@ -11,6 +11,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -27,10 +28,12 @@ public class PatientController {
     ContactService contactService;
 
     @RequestMapping(method = RequestMethod.GET)
-    public String printContacts(ModelMap model) {
+    public String printContacts(ModelMap model, Principal principal) {
 
+        String userName = principal.getName();
         List<Contact> contacts = contactService.listContact();
 
+        model.addAttribute("userName", userName);
         model.addAttribute("contacts", contacts);
         return "contactList";
     }

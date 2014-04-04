@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.Date;
 import java.util.List;
 
@@ -27,10 +28,12 @@ public class ExerciseController {
     ContactService contactService;
 
     @RequestMapping(method = RequestMethod.GET)
-    public String printExercises(ModelMap model) {
+    public String printExercises(ModelMap model, Principal principal) {
 
         List<Contact> contacts = contactService.listContact();
+        String userName = principal.getName();
 
+        model.addAttribute("userName", userName);
         model.addAttribute("contacts", contacts);
         return "exercisesTable";
     }
