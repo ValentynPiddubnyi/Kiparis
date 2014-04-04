@@ -70,13 +70,13 @@
                 <h2>Добавить:</h2>
 
                 <div class="form-group">
-                    <input name="lastName" type="text" placeholder="Фамилия:" class="form-control">
+                    <input name="secondName" type="text" placeholder="Фамилия:" class="form-control">
                 </div>
                 <div class="form-group">
                     <input name="firstName" type="text" placeholder="Имя:" class="form-control">
                 </div>
                 <div class="form-group">
-                    <input name="midleName" type="text" placeholder="Отчество:" class="form-control">
+                    <input name="thirdName" type="text" placeholder="Отчество:" class="form-control">
                 </div>
 
                 <a>Дата рождения:</a>
@@ -143,23 +143,61 @@
                                     <button class="btn btn-warning" data-toggle="modal" data-target="#myModal">
                                         <span class="glyphicon glyphicon-pencil"></span>
                                     </button>
-                                    <!-- Delete Patient -->
+                                    <!-- Editing Patient -->
                                     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
+                                        <div class="modal-editPatients">
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                    <h4 class="modal-title" id="myModalLabel">Подтвердите:</h4>
+                                                    <h4 class="modal-title" id="myModalLabel">Редактирование пациента:</h4>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <h4 class="modal-body">Вы действительно хотите удалить пациента ${contact.secondName} ${contact.firstName}?</h4>
+
+                                                    <form name="editPatient" action="/patients/edit" method="post">
+                                                        <div class="col-lg-6 ">
+
+                                                            <div class="form-group">
+                                                                <input name="secondNameEdit" type="text" value="${contact.secondName}" class="form-control">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input name="firstNameEdit" type="text" value="${contact.firstName}" class="form-control">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input name="thirdNameEdit" type="text" value="${contact.thirdName}" class="form-control">
+                                                            </div>
+
+                                                            <a>Дата рождения:</a>
+
+                                                            <div class="input-group date form-group">
+                                                                <input name="dateEdit" type="text" class="form-control"><span class="input-group-addon"><i
+                                                                    class="glyphicon glyphicon-th" value="${contact.birthday}"></i></span>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <input name="professionEdit" type="text" value="${contact.profession}" class="form-control">
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label>Диагноз:</label>
+                                                                <select name="diagnosisEdit" class="form-control">
+                                                                    <option value="GRIGA">GRIGA</option>
+                                                                    <option value="PERELOM">PERELOM</option>
+                                                                    <option value="PRATRYZIYA">PRATRYZIYA</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <textarea name="comments" rows="5" placeholder="Коментарии:" class="form-control"></textarea>
+                                                            </div>
+                                                        </div>
                                                 </div>
                                                 <div class="modal-footer">
 
-                                                    <form action="/patients/remove" method="post">
+
                                                         <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
-                                                        <input name="removeID"  type="hidden" value="${contact.id}">
-                                                    <button type="submit" class="btn btn-danger">Удалить</button>
+                                                        <input name="idEdit"  type="hidden" value="${contact.id}">
+                                                        <button type="submit" class="btn btn-primary">Редактировать</button>
                                                     </form>
                                                 </div>
                                             </div>

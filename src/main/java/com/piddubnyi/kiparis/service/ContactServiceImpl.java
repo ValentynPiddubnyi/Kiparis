@@ -38,4 +38,10 @@ public class ContactServiceImpl implements ContactService {
     public Contact findById(Integer id) {
         return contactDAO.findById(id);
     }
+
+    @Override
+    @Transactional
+    public Contact save(Contact contact){
+        return contactDAO.save(contact);
+    }
 }

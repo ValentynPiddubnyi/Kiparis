@@ -39,12 +39,28 @@ public class PatientController {
     }
 
     @RequestMapping(value = "/new", method = RequestMethod.POST)
-    public String newPatient(@RequestParam(value = "firstName") String firstNameFake, @RequestParam String lastName,
-                             @RequestParam String midleName, @RequestParam Diagnosis diagnosis, @RequestParam String profession,
+    public String newPatient(@RequestParam(value = "firstName") String firstNameFake, @RequestParam String secondName,
+                             @RequestParam String thirdName, @RequestParam Diagnosis diagnosis, @RequestParam String profession,
                              @RequestParam @PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date date) {
 
-        Contact contact = new Contact(1, lastName, firstNameFake, midleName, date, diagnosis, profession);
+        Contact contact = new Contact(1, secondName, firstNameFake, thirdName, date, diagnosis, profession);
         contactService.addContact(contact);
+        return "redirect:/patients";
+    }
+
+    @RequestMapping("/edit")
+    public String editPatient(@RequestParam String firstNameEdit, @RequestParam String secondNameEdit,
+                              @RequestParam String thirdNameEdit, @RequestParam Diagnosis diagnosisEdit, @RequestParam String professionEdit,
+                              @RequestParam @PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date dateEdit, @RequestParam Integer idEdit){
+
+        Contact contactEdit = contactService.findById(idEdit);
+        contactEdit.setFirstName(firstNameEdit);
+        contactEdit.setSecondName(secondNameEdit);
+        contactEdit.setThirdName(thirdNameEdit);
+        contactEdit.setDiagnosis(diagnosisEdit);
+        contactEdit.setProfession(professionEdit);
+        contactEdit.setBirthday(dateEdit);
+        contactService.save(contactEdit);
         return "redirect:/patients";
     }
 
