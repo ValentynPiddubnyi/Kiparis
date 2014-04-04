@@ -9,9 +9,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Created by fil on 4/4/14.
  */
 @Controller
+@RequestMapping("/login")
 public class Login {
 
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET)
     public String login(ModelMap modelMap){
         return "login";
     }

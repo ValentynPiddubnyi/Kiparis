@@ -45,7 +45,7 @@
                 </li>
             </ul>
             <div class="navbar-right">
-                <a class="navbar-text">${userName}</a>
+                <a class="navbar-text">Пользователь: ${userName}</a>
                 <a class="navbar-brand" href="/j_spring_security_logout">Выйти</a>
             </div>
         </div>
