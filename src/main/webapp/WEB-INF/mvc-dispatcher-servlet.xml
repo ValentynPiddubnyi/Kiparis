@@ -57,22 +57,11 @@
         </property>
     </bean>
 
-    <tx:annotation-driven/>
-
-    <bean id="transactionManager"
-          class="org.springframework.orm.hibernate4.HibernateTransactionManager">
-        <property name="sessionFactory" ref="sessionFactory" />
-    </bean>
-
-    <bean id="persistenceExceptionTranslationPostProcessor"
-          class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
-    <import resource="security-context.xml"/>
-
-    <!--<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+    <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
         <property name="host" value="smtp.gmail.com" />
         <property name="port" value="587" />
-        <property name="username" value="username" />
-        <property name="password" value="password" />
+        <property name="username" value="valentyn@piddubnyi.com" />
+        <property name="password" value="ShiFu@))!XuMingtan" />
 
         <property name="javaMailProperties">
             <props>
@@ -80,5 +69,22 @@
                 <prop key="mail.smtp.starttls.enable">true</prop>
             </props>
         </property>
-    </bean>-->
+    </bean>
+
+    <bean id="mailing" class="com.piddubnyi.kiparis.service.Mailing">
+        <property name="mailSender" ref="mailSender" />
+    </bean>
+
+    <tx:annotation-driven/>
+    <bean id="transactionManager"
+          class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+
+    <bean id="persistenceExceptionTranslationPostProcessor"
+          class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
+
+    <import resource="security-context.xml"/>
+
+
 </beans>

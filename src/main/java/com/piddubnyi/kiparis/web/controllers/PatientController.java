@@ -3,6 +3,7 @@ package com.piddubnyi.kiparis.web.controllers;
 import com.piddubnyi.kiparis.model.Diagnosis;
 import com.piddubnyi.kiparis.model.Contact;
 import com.piddubnyi.kiparis.service.ContactService;
+import com.piddubnyi.kiparis.service.Mailing;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -26,6 +27,9 @@ public class PatientController {
 
     @Autowired
     ContactService contactService;
+
+    @Autowired
+    Mailing mailing;
 
     @RequestMapping(method = RequestMethod.GET)
     public String printContacts(ModelMap model, Principal principal) {
@@ -61,6 +65,9 @@ public class PatientController {
         contactEdit.setProfession(professionEdit);
         contactEdit.setBirthday(dateEdit);
         contactService.save(contactEdit);
+
+        mailing.sendMail("Valentyn@piddubnyi.com", "filpvv@gmail.com","Patien was edited","Patient " +
+                contactService.findById(idEdit).getSecondName() + " " + contactService.findById(idEdit).getFirstName() + "was edited");
         return "redirect:/patients";
     }
 
