@@ -67,7 +67,7 @@ public class PatientController {
         contactService.save(contactEdit);
 
         mailing.sendMail("Valentyn@piddubnyi.com", "filpvv@gmail.com","Patien was edited","Patient " +
-                contactService.findById(idEdit).getSecondName() + " " + contactService.findById(idEdit).getFirstName() + "was edited");
+                contactService.findById(idEdit).getSecondName() + " " + contactService.findById(idEdit).getFirstName() + " was edited");
         return "redirect:/patients";
     }
 

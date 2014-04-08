@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="649d161d-e491-4710-b2cc-1b4bbeb15f97" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_0_2_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_4_0_2_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_0_2_RELEASE.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/service/Mailing.java" afterPath="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/service/Mailing.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/web/controllers/PatientController.java" afterPath="$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/web/controllers/PatientController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Kiparis.iws" />
@@ -118,7 +112,16 @@
       <file leaf-file-name="PatientController.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/web/controllers/PatientController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="5" selection-start="3301" selection-end="3301" vertical-scroll-proportion="0.93793106" vertical-offset="572" max-vertical-offset="1386">
+            <state line="72" column="0" selection-start="3077" selection-end="3077" vertical-scroll-proportion="0.7827586" vertical-offset="572" max-vertical-offset="1386">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="29" selection-start="463" selection-end="463" vertical-scroll-proportion="0.0" vertical-offset="3079" max-vertical-offset="4266">
               <folding />
             </state>
           </provider>
@@ -212,6 +215,20 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Kiparis" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Dependencies" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$DependenciesNode" />
+        </PATH_ELEMENT>
+      </PATH>
       <PATH>
         <PATH_ELEMENT>
           <option name="myItemId" value="" />
@@ -981,7 +998,7 @@
       <workItem from="1396596691206" duration="22193000" />
       <workItem from="1396763662019" duration="1244000" />
       <workItem from="1396863973302" duration="619000" />
-      <workItem from="1396945217549" duration="21774000" />
+      <workItem from="1396945217549" duration="22351000" />
     </task>
     <task id="LOCAL-00001" summary="Added dataBase and in work! wow!">
       <created>1395052201718</created>
@@ -1063,11 +1080,15 @@
       <created>1396979792489</created>
       <updated>1396979792489</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Bug with patients editing is fixed&#10;">
+      <created>1396986171938</created>
+      <updated>1396986171938</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="247479000" />
+    <option name="totallyTimeSpent" value="248056000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1159,7 +1180,8 @@
     <MESSAGE value="Small changes to main.js for creating editing of exercises in timeLine" />
     <MESSAGE value="Feature &quot;Holding users&quot; in DB was added" />
     <MESSAGE value="Bug with patients editing is fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug with patients editing is fixed" />
+    <MESSAGE value="Bug with patients editing is fixed&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug with patients editing is fixed&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1509,13 +1531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="29" selection-start="463" selection-end="463" vertical-scroll-proportion="95.8" vertical-offset="3054" max-vertical-offset="4266">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/security-context.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="46" selection-start="827" selection-end="827" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594">
@@ -1557,9 +1572,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="29" selection-start="463" selection-end="463" vertical-scroll-proportion="0.0" vertical-offset="3079" max-vertical-offset="4266">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/piddubnyi/kiparis/web/controllers/PatientController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="5" selection-start="3301" selection-end="3301" vertical-scroll-proportion="0.93793106" vertical-offset="572" max-vertical-offset="1386">
+        <state line="72" column="0" selection-start="3077" selection-end="3077" vertical-scroll-proportion="0.7827586" vertical-offset="572" max-vertical-offset="1386">
           <folding />
         </state>
       </provider>
