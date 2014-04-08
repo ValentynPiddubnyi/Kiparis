@@ -12,6 +12,7 @@ public class ExerciseVO {
     private String content = null;
     private String group = null;
     private String className = null;
+    private String info = "Some info";
 
     public ExerciseVO() {
     }
@@ -71,5 +72,13 @@ public class ExerciseVO {
 
     public void setClassName(String className) {
         this.className = className;
+    }
+
+    public String getInfo() {
+        return info;
+    }
+
+    public void setInfo(String info) {
+        this.info = info;
     }
 }

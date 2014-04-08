@@ -140,11 +140,11 @@
                             <td>
 
                                     <!-- Button trigger modal -->
-                                    <button class="btn btn-warning" data-toggle="modal" data-target="#myModal">
+                                    <button class="btn btn-warning" data-toggle="modal" data-target="#myModal${contact.id}">
                                         <span class="glyphicon glyphicon-pencil"></span>
                                     </button>
                                     <!-- Editing Patient -->
-                                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal fade" id="myModal${contact.id}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                         <div class="modal-editPatients">
                                             <div class="modal-content">
                                                 <div class="modal-header">
@@ -169,8 +169,8 @@
                                                             <a>Дата рождения:</a>
 
                                                             <div class="input-group date form-group">
-                                                                <input name="dateEdit" type="text" class="form-control"><span class="input-group-addon"><i
-                                                                    class="glyphicon glyphicon-th" value="${contact.birthday}"></i></span>
+                                                                <input name="dateEdit" type="text" class="form-control" value="${contact.birthday}"><span class="input-group-addon"><i
+                                                                    class="glyphicon glyphicon-th"></i></span>
                                                             </div>
 
                                                             <div class="form-group">
@@ -193,12 +193,11 @@
                                                         </div>
                                                 </div>
                                                 <div class="modal-footer">
-
-
-                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
-                                                        <input name="idEdit"  type="hidden" value="${contact.id}">
-                                                        <button type="submit" class="btn btn-primary">Редактировать</button>
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+                                                    <input name="idEdit"  type="hidden" value="${contact.id}">
+                                                    <button type="submit" class="btn btn-primary">Редактировать</button>
                                                     </form>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -207,8 +206,8 @@
                             </td>
                             <td>${contact.id}</td>
                             <td>${contact.photo}</td>
-                            <td>${contact.firstName}</td>
                             <td>${contact.secondName}</td>
+                            <td>${contact.firstName}</td>
                             <td>${contact.thirdName}</td>
                             <td>${contact.diagnosis}</td>
                             <td>${contact.birthday}</td>

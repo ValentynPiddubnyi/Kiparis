@@ -43,12 +43,12 @@ public class PatientController {
                              @RequestParam String thirdName, @RequestParam Diagnosis diagnosis, @RequestParam String profession,
                              @RequestParam @PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date date) {
 
-        Contact contact = new Contact(1, secondName, firstNameFake, thirdName, date, diagnosis, profession);
+        Contact contact = new Contact(1, firstNameFake, secondName, thirdName, date, diagnosis, profession);
         contactService.addContact(contact);
         return "redirect:/patients";
     }
 
-    @RequestMapping("/edit")
+    @RequestMapping(value = "/edit", method = RequestMethod.POST)
     public String editPatient(@RequestParam String firstNameEdit, @RequestParam String secondNameEdit,
                               @RequestParam String thirdNameEdit, @RequestParam Diagnosis diagnosisEdit, @RequestParam String professionEdit,
                               @RequestParam @PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date dateEdit, @RequestParam Integer idEdit){
