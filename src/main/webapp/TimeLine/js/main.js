@@ -18,8 +18,10 @@ TimeLine.prototype = {
 			if(items){
 				self.prepareData(items);
 				self.render()
+                self.registerEventListeners(self.timeline);
 			}
 		});
+
 	},
 	loadData: function(callback){
 		var self = this;
@@ -78,14 +80,15 @@ TimeLine.prototype = {
 		// Instantiate our timeline object.
 		var timeline = new links.Timeline(document.getElementById('mytimeline'));
 
-		// register event listeners
-		this.registerEventListeners(timeline);
+		// register event listeners commented for making modal dialog appearing
+		//this.registerEventListeners(timeline);
 
 		// Draw our timeline with the created data and options
 		timeline.draw(this.dataTable, options);
 
 		
 		timeline.setVisibleChartRange(start, end);
+        this.timeline = timeline;
 	},
 	registerEventListeners: function(timeline){
 	/*
@@ -96,5 +99,23 @@ TimeLine.prototype = {
 		$(window).bind('resize', function(){
 			timeline.redraw();
 		});
+
+        $.each(timeline.items, function(index, item){
+            var domEl = item.dom;
+
+            $(domEl).on({
+                'mouseenter': function(e){
+                    console.log('mouseenter');
+                },
+                'mouseleave': function(e){
+                    console.log('mouseleave');
+                },
+                'click': function(e){
+                    console.log('click')
+                    e.preventDefault();
+                }
+            })
+            console.log(item);
+        });
 	}
 }
