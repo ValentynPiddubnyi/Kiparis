@@ -40,4 +40,15 @@ public class ExerciseDAOImpl implements ExerciseDAO {
         }
 
     }
+
+    @Override
+    public Exercise findById(Integer id) {
+        return (Exercise) sessionFactory.getCurrentSession().get(Exercise.class, id);
+
+    }
+
+    @Override
+    public void save(Exercise exercise) {
+        sessionFactory.getCurrentSession().saveOrUpdate(exercise);
+    }
 }

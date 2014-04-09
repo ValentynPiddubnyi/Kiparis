@@ -5,6 +5,7 @@ import com.piddubnyi.kiparis.model.Exercise;
 import com.piddubnyi.kiparis.model.ExerciseVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,6 +32,18 @@ public class ExerciseServiceImpl implements ExerciseService {
     @Override
     public void removeExercise(Integer id) {
         exerciseDAO.removeExercise(id);
+    }
+
+    @Override
+    @Transactional
+    public Exercise findById(Integer id) {
+        return exerciseDAO.findById(id);
+    }
+
+    @Override
+    @Transactional
+    public void save(Exercise exercise) {
+        exerciseDAO.save(exercise);
     }
 
     public List<ExerciseVO> listExercisesVO(){

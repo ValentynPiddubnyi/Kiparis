@@ -60,6 +60,29 @@ public class ExerciseController {
         return "redirect:/";
     }
 
+    @RequestMapping(value = "/exerciseEdit", method = RequestMethod.POST)
+    public String exerciseEdit(@RequestParam Integer id, @RequestParam @PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date dateEdit,
+                               @RequestParam String trainerEdit, @RequestParam String startTimeEdit, @RequestParam String endTimeEdit) {
+
+        Date startDate = new Date();
+        startDate.setDate(dateEdit.getDate());
+        startDate.setHours(Integer.parseInt(startTimeEdit.substring(0,2)));
+        startDate.setMinutes(Integer.parseInt(startTimeEdit.substring(3, 5)));
+
+        Date endDate = new Date();
+        endDate.setDate(dateEdit.getDate());
+        endDate.setHours(Integer.parseInt(endTimeEdit.substring(0,2)));
+        endDate.setMinutes(Integer.parseInt(endTimeEdit.substring(3, 5)));
+
+        Exercise editExercise = exerciseService.findById(id);
+        editExercise.setStart(startDate);
+        editExercise.setEnd(endDate);
+        editExercise.setGroup(trainerEdit);
+        exerciseService.save(editExercise);
+
+        return "redirect:/";
+    }
+
     @RequestMapping(value = "/exercisesDataJson", method = RequestMethod.GET)
     public @ResponseBody List<ExerciseVO> exercisesDataJson(ModelMap model){
         return exerciseService.listExercisesVO();

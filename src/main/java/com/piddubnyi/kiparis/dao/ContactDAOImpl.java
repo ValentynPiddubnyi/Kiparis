@@ -40,9 +40,8 @@ public class ContactDAOImpl implements ContactDAO {
     }
 
     @Override
-    public Contact save(Contact contact) {
+    public void save(Contact contact) {
         sessionFactory.getCurrentSession().saveOrUpdate(contact);
-        return contact;
     }
 
     @Override

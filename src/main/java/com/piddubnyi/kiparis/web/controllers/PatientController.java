@@ -28,9 +28,6 @@ public class PatientController {
     @Autowired
     ContactService contactService;
 
-    @Autowired
-    Mailing mailing;
-
     @RequestMapping(method = RequestMethod.GET)
     public String printContacts(ModelMap model, Principal principal) {
 
@@ -66,8 +63,6 @@ public class PatientController {
         contactEdit.setBirthday(dateEdit);
         contactService.save(contactEdit);
 
-        mailing.sendMail("Valentyn@piddubnyi.com", "filpvv@gmail.com","Patien was edited","Patient " +
-                contactService.findById(idEdit).getSecondName() + " " + contactService.findById(idEdit).getFirstName() + " was edited");
         return "redirect:/patients";
     }
 

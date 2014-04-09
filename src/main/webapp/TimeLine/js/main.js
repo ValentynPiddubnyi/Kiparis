@@ -64,7 +64,7 @@ TimeLine.prototype = {
         // specify options
         var options = {
                 width:  "100%",
-                height: "99%",
+                height: "auto",
                 layout: "box",
                 axisOnTop: true,
                 eventMargin: 10,  // minimal margin between events
@@ -105,8 +105,8 @@ TimeLine.prototype = {
         return itemHtml.html();
     },
     registerEventListeners: function(timeline){
-        $.each(timeline.items, function(index, item){
-            var domEl = item.dom,
+        $.each(timeline.items, function(index, obj){
+            var domEl = obj.dom,
                 item = $(domEl).find('.timeline-item');
 
             item.popover({
@@ -120,10 +120,48 @@ TimeLine.prototype = {
             item.on({
                 'click': function(e){
                     var hiddenField = $('#myModal').find('input:hidden[name=id]');
+                    var dateEdit = $('#myModal').find('input[name=dateEdit]');
+                    var startTimeEdit = $('#myModal').find('input[name=startTimeEdit]');
+                    var endTimeEdit = $('#myModal').find('input[name=endTimeEdit]');
+                    document.getElementById('title').innerHTML = obj.content;
 
                     if(hiddenField){
                         hiddenField.val(item.data('id'));
                     }
+                    var dateYearMonthDay = obj.start.getFullYear();
+                    day = obj.start.getDate();
+                    month = obj.start.getMonth() + 1;
+                    dateYearMonthDay += '-' + (month < 10 ? '0' + month : month);
+                    dateYearMonthDay += '-' + (day < 10 ? '0' + day : day);
+
+                    if(dateEdit){
+                        dateEdit.val(dateYearMonthDay);
+                    }
+                    hoursStart = obj.start.getHours();
+                    minutesStart = obj.start.getMinutes();
+                    if(startTimeEdit){
+                        startTimeEdit.val((hoursStart < 10 ? '0' + hoursStart : hoursStart) + ':' + (minutesStart < 10 ? '0' + minutesStart : minutesStart));
+                    }
+                    hoursEnd = obj.end.getHours();
+                    minutesEnd = obj.end.getMinutes();
+                    if(endTimeEdit){
+                        endTimeEdit.val((hoursEnd < 10 ? '0' + hoursEnd : hoursEnd) + ':' + (minutesEnd < 10 ? '0' + minutesEnd : minutesEnd));
+                    }
+
+
+                    var trainer = document.getElementById('trainerEdit');
+                    trainer.selectedIndex = 0;
+                    if(obj.group.content == 'Massage') {
+                        trainer.selectedIndex = 8;
+                    }
+                    if(obj.group.content == 'Consultation') {
+                        trainer.selectedIndex = 9;
+                    }
+                    var trainerText = obj.group.content;
+                    if(trainerText.substring(0,7) == 'Trainer') {
+                        trainer.selectedIndex = trainerText.substring(8,9) - 1;
+                    }
+
                     // Manually opens a modal
                     $('#myModal').modal('show');
 

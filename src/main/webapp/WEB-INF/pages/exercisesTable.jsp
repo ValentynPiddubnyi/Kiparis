@@ -137,23 +137,24 @@
                 </div>--%>
 
 
-<%--                <div class="form-group">
-                    <select name="session" class="form-control">
-                        <option value="1">Смена №1</option>
-                        <option value="2">Смена №2</option>
-                        <option value="3">Смена №3</option>
-                        <option value="4">Смена №4</option>
-                        <option value="5">Смена №5</option>
-                        <option value="6">Смена №6</option>
-                        <option value="7">Смена №7</option>
-                        <option value="8">Смена №8</option>
-                    </select>
-                </div>--%>
+                <%--                <div class="form-group">
+                                    <select name="session" class="form-control">
+                                        <option value="1">Смена №1</option>
+                                        <option value="2">Смена №2</option>
+                                        <option value="3">Смена №3</option>
+                                        <option value="4">Смена №4</option>
+                                        <option value="5">Смена №5</option>
+                                        <option value="6">Смена №6</option>
+                                        <option value="7">Смена №7</option>
+                                        <option value="8">Смена №8</option>
+                                    </select>
+                                </div>--%>
 
 
                 <p>Назначил: имя того кто залогинился</p>
+
                 <div align="left">
-                    <button type="submit" class="btn btn-success" role="button" >Добавить</button>
+                    <button type="submit" class="btn btn-success" role="button">Добавить</button>
                 </div>
 
             </form>
@@ -198,14 +199,49 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                <h4 class="modal-title" id="title">Modal title</h4>
             </div>
             <div class="modal-body">
-                <input type="hidden" name="id">
+                <form name="exerciseEdit" action="/exerciseEdit" method="post">
+                    <input type="hidden" name="id">
+
+                    <div class="form-group">
+                        <select id="trainerEdit" name="trainerEdit" class="form-control">
+                            <option value="Trainer 1">Тренажер №1</option>
+                            <option value="Trainer 2">Тренажер №2</option>
+                            <option value="Trainer 3">Тренажер №3</option>
+                            <option value="Trainer 4">Тренажер №4</option>
+                            <option value="Trainer 5">Тренажер №5</option>
+                            <option value="Trainer 6">Тренажер №6</option>
+                            <option value="Trainer 7">Тренажер №7</option>
+                            <option value="Trainer 8">Тренажер №8</option>
+                            <option value="Massage">Массаж</option>
+                            <option value="Consultation">Консультация</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <a>Дата:</a>
+
+                        <div class="input-group date">
+                            <input name="dateEdit" type="text" class="form-control"><span class="input-group-addon"><i
+                                class="glyphicon glyphicon-th"></i></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <a>Время с:</a>
+                        <input name="startTimeEdit" type="text" placeholder="c" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <a>по:</a>
+                        <input name="endTimeEdit" type="text" placeholder="по" class="form-control">
+                    </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Отменить</button>
+                <button type="submit" class="btn btn-primary">Сохранить</button>
+                </form>
             </div>
         </div>
     </div>

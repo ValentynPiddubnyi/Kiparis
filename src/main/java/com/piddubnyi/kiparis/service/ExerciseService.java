@@ -12,6 +12,7 @@ public interface ExerciseService {
     public void addExercise(Exercise exercise);
     public List<Exercise> listExercises();
     public void removeExercise(Integer id);
-
+    public Exercise findById(Integer id);
     public List<ExerciseVO> listExercisesVO();
+    public void save(Exercise exercise);
 }

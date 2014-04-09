@@ -12,4 +12,6 @@ public interface ExerciseDAO {
         public void addExercise(Exercise exercise);
         public List<Exercise> listExercise();
         public void removeExercise(Integer id);
+        public Exercise findById(Integer id);
+        public void save(Exercise exercise);
 }

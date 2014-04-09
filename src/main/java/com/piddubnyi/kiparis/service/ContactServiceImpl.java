@@ -41,7 +41,7 @@ public class ContactServiceImpl implements ContactService {
 
     @Override
     @Transactional
-    public Contact save(Contact contact){
-        return contactDAO.save(contact);
+    public void save(Contact contact){
+        contactDAO.save(contact);
     }
 }
