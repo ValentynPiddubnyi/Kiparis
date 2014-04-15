@@ -76,6 +76,15 @@ public class Employee {
     @Temporal(TemporalType.TIMESTAMP)
     private Date created;
 
+    public Employee(){}
+
+    public Employee(String firstName, String secondName, String thirdName, Date birthday) {
+        this.firstName = firstName;
+        this.secondName = secondName;
+        this.thirdName = thirdName;
+        this.birthday = birthday;
+    }
+
     public Set<Exercise> getCreatedExercises() {
         return this.createdExercises;
     }

@@ -71,7 +71,7 @@
         </property>
     </bean>
 
-    <bean id="mailing" class="com.piddubnyi.kiparis.service.Mailing">
+    <bean id="mailing" class="com.piddubnyi.kiparis.service.MailingService">
         <property name="mailSender" ref="mailSender" />
     </bean>
 

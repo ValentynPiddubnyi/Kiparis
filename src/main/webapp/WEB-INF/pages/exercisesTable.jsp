@@ -49,6 +49,9 @@
                 <li>
                     <a href="/patients">Список пациентов</a>
                 </li>
+                <li>
+                    <a href="/employees">Список Сотрудников</a>
+                </li>
             </ul>
             <div class="navbar-right">
                 <a class="navbar-text">Пользователь: ${userName}</a>

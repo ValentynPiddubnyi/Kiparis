@@ -3,7 +3,6 @@ package com.piddubnyi.kiparis.web.controllers;
 import com.piddubnyi.kiparis.model.Diagnosis;
 import com.piddubnyi.kiparis.model.Contact;
 import com.piddubnyi.kiparis.service.ContactService;
-import com.piddubnyi.kiparis.service.Mailing;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.format.annotation.DateTimeFormat;
